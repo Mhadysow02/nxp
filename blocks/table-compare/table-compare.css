@@ -1,0 +1,111 @@
+/* keep the block inside its column; the table scrolls inside .table-compare-scroller */
+.table-compare-wrapper,
+.table-compare {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.table-compare .table-compare-scroller {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-compare table {
+  width: 100%;
+  min-width: 600px;
+  margin: 0 0 22px;
+  border: 1px solid #ebe7dd;
+  border-collapse: collapse;
+  table-layout: auto;
+  font-size: 14px;
+  line-height: 17.5px;
+  color: var(--text-color);
+}
+
+.table-compare th,
+.table-compare td {
+  padding: 8px;
+  border: 1px solid #ebe7dd;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* header row */
+.table-compare thead th {
+  border-right-color: transparent;
+  border-bottom: 2px solid var(--border-color);
+  background-color: #ebe7dd;
+  font-weight: 600;
+  text-align: center;
+}
+
+.table-compare thead th:last-child {
+  border-right-color: #ebe7dd;
+}
+
+/* stripes */
+.table-compare tbody tr:nth-child(odd) td {
+  background-color: var(--background-color);
+}
+
+.table-compare tbody tr:nth-child(even) td {
+  background-color: #f7f5f1;
+}
+
+.table-compare th p,
+.table-compare td p {
+  margin: 0 0 11px;
+}
+
+.table-compare th p {
+  margin: 0;
+}
+
+.table-compare strong {
+  font-weight: 600;
+}
+
+/* links: plain blue text, never EDS buttons */
+.table-compare a:any-link,
+main .table-compare a.button:any-link {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--link-color);
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.table-compare a:hover {
+  text-decoration: underline;
+}
+
+.table-compare a.table-compare-cta::after {
+  content: '\203A';
+  margin-left: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.table-compare sup {
+  font-size: 60%;
+}
+
+.table-compare .table-compare-note {
+  font-size: 80%;
+  line-height: 14px;
+  color: var(--muted-text-color);
+}
+
+.table-compare.no-header tbody tr:first-child td {
+  font-weight: 600;
+}

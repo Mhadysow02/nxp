@@ -1,0 +1,383 @@
+{
+  "definitions": [
+    {
+      "title": "Table Compare",
+      "id": "table-compare",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Table Compare",
+              "model": "table-compare",
+              "filter": "table-compare-5-columns"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Table Compare Row",
+      "id": "table-compare-row",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Row",
+              "model": "table-compare-row",
+              "column1text": "Column1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Table Compare Col 2",
+      "id": "table-compare-col-2",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Row",
+              "model": "table-compare-col-2",
+              "column1text": "Column1",
+              "column2text": "Column2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Table Compare Col 3",
+      "id": "table-compare-col-3",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Row",
+              "model": "table-compare-col-3",
+              "column1text": "Column1",
+              "column2text": "Column2",
+              "column3text": "Column3"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Table Compare Col 4",
+      "id": "table-compare-col-4",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Row",
+              "model": "table-compare-col-4",
+              "column1text": "Column1",
+              "column2text": "Column2",
+              "column3text": "Column3",
+              "column4text": "Column4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Table Compare Col 5",
+      "id": "table-compare-col-5",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Row",
+              "model": "table-compare-col-5",
+              "column1text": "Column1",
+              "column2text": "Column2",
+              "column3text": "Column3",
+              "column4text": "Column4",
+              "column5text": "Column5"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Table Compare Col 6",
+      "id": "table-compare-col-6",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Row",
+              "model": "table-compare-col-6",
+              "column1text": "Column1",
+              "column2text": "Column2",
+              "column3text": "Column3",
+              "column4text": "Column4",
+              "column5text": "Column5",
+              "column6text": "Column6"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "table-compare",
+      "fields": [
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "value": "",
+          "label": "Options",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Header",
+              "children": [
+                {
+                  "name": "No Header",
+                  "value": "no-header"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "filter",
+          "label": "Columns",
+          "valueType": "string",
+          "value": "table-compare-5-columns",
+          "options": [
+            {
+              "name": "1 Column",
+              "value": "table-compare"
+            },
+            {
+              "name": "2 Columns",
+              "value": "table-compare-2-columns"
+            },
+            {
+              "name": "3 Columns",
+              "value": "table-compare-3-columns"
+            },
+            {
+              "name": "4 Columns",
+              "value": "table-compare-4-columns"
+            },
+            {
+              "name": "5 Columns",
+              "value": "table-compare-5-columns"
+            },
+            {
+              "name": "6 Columns",
+              "value": "table-compare-6-columns"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "table-compare-row",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column1text",
+          "label": "Column1"
+        }
+      ]
+    },
+    {
+      "id": "table-compare-col-2",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column1text",
+          "label": "Column1"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column2text",
+          "label": "Column2"
+        }
+      ]
+    },
+    {
+      "id": "table-compare-col-3",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column1text",
+          "label": "Column1"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column2text",
+          "label": "Column2"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column3text",
+          "label": "Column3"
+        }
+      ]
+    },
+    {
+      "id": "table-compare-col-4",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column1text",
+          "label": "Column1"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column2text",
+          "label": "Column2"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column3text",
+          "label": "Column3"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column4text",
+          "label": "Column4"
+        }
+      ]
+    },
+    {
+      "id": "table-compare-col-5",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column1text",
+          "label": "Column1"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column2text",
+          "label": "Column2"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column3text",
+          "label": "Column3"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column4text",
+          "label": "Column4"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column5text",
+          "label": "Column5"
+        }
+      ]
+    },
+    {
+      "id": "table-compare-col-6",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column1text",
+          "label": "Column1"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column2text",
+          "label": "Column2"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column3text",
+          "label": "Column3"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column4text",
+          "label": "Column4"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column5text",
+          "label": "Column5"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "column6text",
+          "label": "Column6"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "table-compare",
+      "components": [
+        "table-compare-row"
+      ]
+    },
+    {
+      "id": "table-compare-2-columns",
+      "components": [
+        "table-compare-col-2"
+      ]
+    },
+    {
+      "id": "table-compare-3-columns",
+      "components": [
+        "table-compare-col-3"
+      ]
+    },
+    {
+      "id": "table-compare-4-columns",
+      "components": [
+        "table-compare-col-4"
+      ]
+    },
+    {
+      "id": "table-compare-5-columns",
+      "components": [
+        "table-compare-col-5"
+      ]
+    },
+    {
+      "id": "table-compare-6-columns",
+      "components": [
+        "table-compare-col-6"
+      ]
+    }
+  ]
+}

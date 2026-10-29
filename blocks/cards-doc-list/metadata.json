@@ -1,0 +1,19 @@
+{
+  "variantName": "cards-doc-list",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Documentation list",
+    "layout": "Compact single-line document rows with keyword filter; collapses after 5 with Show All",
+    "notes": "Filterable document list (left facet sidebar with Public/Secure radio and Document Types checkboxes; keyword filter; Compact List toggle; Sort by). Grouped \"Application Note (13)\" rows: account-required icon, linked title with code id, HTML | PDF links, date, revision, bookmark; \"Show All\" button. 52 documents total."
+  },
+  "contentPattern": {
+    "structure": "one row per document: optional icon image (or empty cell) | title link with id, HTML/PDF links, date, revision",
+    "rowModel": "collection"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Documentation section.",
+  "reuseGuidance": "Use for document/download lists; facets are not authored.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

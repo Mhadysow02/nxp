@@ -1,0 +1,201 @@
+/* Cards Doc List: NXP compact documentation list (source: #documentationDiv .ds-resources-content) */
+
+/* keyword filter (source .keyword-filter-bar .search-input) */
+.cards-doc-list .cards-doc-list-filter {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  margin: 0 0 36px;
+  padding: 10px 40px 10px 45px;
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  background-color: rgb(235 231 221);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23898683' stroke-width='1.6' stroke-linejoin='round'%3E%3Cpath d='M3 4h18l-7 8.5V19l-4 2v-8.5z'/%3E%3C/svg%3E");
+  background-position: 18px center;
+  background-repeat: no-repeat;
+  background-size: 17px 17px;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 21.28px;
+  appearance: none;
+}
+
+.cards-doc-list .cards-doc-list-filter::placeholder {
+  color: var(--muted-text-color);
+  opacity: 1;
+}
+
+.cards-doc-list .cards-doc-list-filter:focus {
+  outline: none;
+  border-color: var(--link-color);
+}
+
+.cards-doc-list .cards-doc-list-filter::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+/* document rows; top rule mirrors the source list header divider (.collapsible-header-wrapper border-bottom) */
+.cards-doc-list > ul {
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid rgb(170 166 162);
+  list-style: none;
+}
+
+.cards-doc-list > ul > li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 10px 0 6px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cards-doc-list > ul > li[hidden] {
+  display: none;
+}
+
+.cards-doc-list .cards-doc-list-card-image {
+  flex: 0 0 24px;
+  line-height: 0;
+}
+
+.cards-doc-list .cards-doc-list-card-image img {
+  width: 24px;
+  height: auto;
+}
+
+.cards-doc-list .cards-doc-list-card-body {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 23px;
+}
+
+.cards-doc-list .cards-doc-list-card-body > * {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* title link + [doc id] + optional featured marker */
+.cards-doc-list .cards-doc-list-title {
+  flex: 1 1 100%;
+  min-width: 0;
+  color: var(--muted-text-color);
+  font-weight: 400;
+}
+
+.cards-doc-list .cards-doc-list-title strong {
+  font-weight: 400;
+}
+
+.cards-doc-list .cards-doc-list-title a:any-link {
+  margin-right: 4px;
+  color: var(--link-color);
+}
+
+.cards-doc-list .cards-doc-list-code {
+  color: var(--muted-text-color);
+  overflow-wrap: anywhere;
+}
+
+.cards-doc-list .cards-doc-list-marker {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 4px 8px 3px;
+  background-color: rgb(195 239 254);
+  color: rgb(19 53 126);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 10px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  vertical-align: 1px;
+}
+
+/* HTML | PDF format links */
+.cards-doc-list .cards-doc-list-formats {
+  color: var(--muted-text-color);
+}
+
+.cards-doc-list .cards-doc-list-formats a:any-link {
+  color: var(--link-color);
+}
+
+/* date | revision */
+.cards-doc-list .cards-doc-list-meta {
+  display: flex;
+  gap: 14px;
+  color: var(--muted-text-color);
+}
+
+.cards-doc-list .cards-doc-list-date,
+.cards-doc-list .cards-doc-list-rev {
+  display: block;
+}
+
+/* collapse / filter state */
+.cards-doc-list.is-collapsed:not(.is-filtering) .cards-doc-list-overflow {
+  display: none;
+}
+
+/* Show All (source a.btn.btn-default) */
+.cards-doc-list .cards-doc-list-show-all {
+  display: inline-block;
+  margin: 12px 0 0;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 100px;
+  background: transparent;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  transition: background-color var(--button-transition);
+}
+
+.cards-doc-list .cards-doc-list-show-all:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.cards-doc-list.is-filtering .cards-doc-list-show-all {
+  display: none;
+}
+
+@media (width >= 900px) {
+  .cards-doc-list .cards-doc-list-card-body {
+    flex-wrap: nowrap;
+    gap: 14px;
+  }
+
+  .cards-doc-list .cards-doc-list-title {
+    flex: 1 1 auto;
+    margin-right: -6px;
+  }
+
+  .cards-doc-list .cards-doc-list-formats {
+    flex: 0 0 150px;
+  }
+
+  .cards-doc-list .cards-doc-list-meta {
+    flex: 0 0 188px;
+  }
+
+  .cards-doc-list .cards-doc-list-date {
+    flex: 0 0 94px;
+  }
+
+  .cards-doc-list .cards-doc-list-rev {
+    flex: 0 0 80px;
+  }
+}

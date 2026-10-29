@@ -1,0 +1,19 @@
+{
+  "variantName": "hero-product",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Page-top product title band",
+    "layout": "Text-only product hero: H1 product name, meta line with product code, lifecycle status link and alert link; optional background image",
+    "notes": "Product title H1 \"S32K3 Microcontrollers for Automotive General Purpose\", product code \"S32K3\", lifecycle status \"Active\" (links to product lifecycle page) and \"Receive alerts\" link; bookmark icon at right. No image."
+  },
+  "contentPattern": {
+    "structure": "2 rows: optional background image | rich text (H1, paragraphs with product code, status link, CTA link)",
+    "rowModel": "standalone"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Top of every product detail page.",
+  "reuseGuidance": "Use for product/page title bands; use plain hero for image-led banners.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

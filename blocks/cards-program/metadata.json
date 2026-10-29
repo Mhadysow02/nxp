@@ -1,0 +1,19 @@
+{
+  "variantName": "cards-program",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Product program list",
+    "layout": "Stacked items, logo left and title/description/Read more right, separated by rules",
+    "notes": "Two stacked program items, each logo image left and H4 title, paragraph and \"Read more\" link right (SafeAssure, Product Longevity), separated by a rule."
+  },
+  "contentPattern": {
+    "structure": "one row per program: logo image | H4 title, paragraph, Read more link",
+    "rowModel": "collection"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Product Details > Product Programs.",
+  "reuseGuidance": "Use for short lists of logo+text promos.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

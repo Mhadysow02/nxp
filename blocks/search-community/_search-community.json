@@ -1,0 +1,48 @@
+{
+  "definitions": [
+    {
+      "title": "Search Community",
+      "id": "search-community",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Search Community",
+              "model": "search-community"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "search-community",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "index",
+          "label": "Community search URL",
+          "value": "https://community.nxp.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=true"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "placeholder",
+          "label": "Placeholder",
+          "value": "Search NXP Community"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "buttonLabel",
+          "label": "Button label",
+          "value": "Search"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

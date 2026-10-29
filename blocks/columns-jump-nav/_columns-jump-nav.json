@@ -1,0 +1,49 @@
+{
+  "definitions": [
+    {
+      "title": "Columns Jump Nav",
+      "id": "columns-jump-nav",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/columns/v1/columns",
+            "template": {
+              "columns": "3",
+              "rows": "1",
+              "name": "Columns Jump Nav"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "columns-jump-nav",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "number",
+          "name": "columns",
+          "value": "",
+          "label": "Columns"
+        },
+        {
+          "component": "text",
+          "valueType": "number",
+          "name": "rows",
+          "value": "",
+          "label": "Rows"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "columns-jump-nav",
+      "components": [
+        "column"
+      ]
+    }
+  ]
+}

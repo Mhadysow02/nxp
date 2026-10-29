@@ -1,0 +1,19 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Related products slider",
+    "layout": "Horizontally scrolling bordered product boxes with prev/next buttons and progress bar",
+    "notes": "Horizontal swiper of 7 bordered product boxes (image, product name linking to product page, Active status, \"Complementary\" tag, description, Data Sheet HTML | PDF links) with next arrow and progress bar."
+  },
+  "contentPattern": {
+    "structure": "one row per product: image | name link, status, tag, description, data sheet links",
+    "rowModel": "collection"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Product Details > Related products.",
+  "reuseGuidance": "Use for product carousels of look-alike boxes.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

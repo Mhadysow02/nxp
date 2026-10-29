@@ -1,0 +1,19 @@
+{
+  "variantName": "columns-jump-nav",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Sticky in-page jump navigation",
+    "layout": "Single bar: label, horizontally scrolling anchor links, primary/secondary buttons; sticks to viewport top and highlights the section in view",
+    "notes": "\"Jump To\" label, row of in-page anchor links (Overview, Product Details, Documentation, Design Resources, Training, Support) and two buttons (Buy/Parametrics primary, Package/Quality secondary). Becomes sticky on scroll."
+  },
+  "contentPattern": {
+    "structure": "1 row x 3 cells: label | in-page anchor links | action buttons",
+    "rowModel": "standalone"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Directly under the product hero.",
+  "reuseGuidance": "Use for long pages with section anchors; anchors must match section ids.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

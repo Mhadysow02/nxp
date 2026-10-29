@@ -1,0 +1,19 @@
+{
+  "variantName": "search-community",
+  "baseBlock": "search",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Community search field",
+    "layout": "Inline search input with submit button that opens community.nxp.com search results",
+    "notes": "Community search field \"Search NXP Community\" with black \"Search\" button (submits to community.nxp.com, narrow-search dropdown for S32K / S32 Design Studio)."
+  },
+  "contentPattern": {
+    "structure": "row 1: community search URL; optional row 2: placeholder; optional row 3: button label",
+    "rowModel": "standalone"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Support section.",
+  "reuseGuidance": "Submits to community.nxp.com only; any other host falls back to the default community search URL.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

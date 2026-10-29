@@ -1,0 +1,346 @@
+/* Table Parametric -- values from source computed styles (nxp.com product selector) */
+
+.table-parametric {
+  min-width: 0;
+  max-width: 100%;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+}
+
+/* toolbar: result count + download */
+.table-parametric .table-parametric-toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 0 16px;
+}
+
+.table-parametric .table-parametric-count {
+  margin: 0;
+  padding: 0 16px 0 0;
+  font-size: var(--body-font-size-m);
+  line-height: 22.8571px;
+}
+
+.table-parametric .table-parametric-download {
+  position: relative;
+  margin: 0;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 100px;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.4px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.table-parametric .table-parametric-download:hover {
+  background-color: rgb(0 0 0 / 6%);
+}
+
+/* horizontal scroll stays inside the block; never widens the page */
+.table-parametric .table-parametric-scroller {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto hidden;
+  border: 1px solid var(--border-color);
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-parametric table {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+  line-height: 17.5px;
+}
+
+.table-parametric th,
+.table-parametric td {
+  box-sizing: border-box;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.table-parametric th p,
+.table-parametric td p {
+  margin: 0;
+}
+
+/* header cells */
+.table-parametric thead th {
+  width: 200px;
+  min-width: 200px;
+  height: 118px;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  background-color: #ebe7dd;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17.5px;
+}
+
+/* body cells */
+.table-parametric tbody td,
+.table-parametric tbody th {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  font-weight: 400;
+}
+
+.table-parametric tbody tr:hover > td,
+.table-parametric tbody tr:hover > th {
+  background-color: #ffeda7;
+}
+
+.table-parametric tr[hidden] {
+  display: none;
+}
+
+/* "Order" column: orange pill */
+.table-parametric td.col-order p {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 100px;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* "CAD Model" column: link color */
+.table-parametric td.col-cad-model {
+  color: var(--link-color);
+}
+
+/* "Status" column: check badge */
+.table-parametric td.col-status p {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.table-parametric td.col-status p::before {
+  content: '';
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  margin-top: -1px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%230cc40c'/%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-4.8' fill='none' stroke='%23fff' stroke-width='1.8'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.table-parametric thead tr > :last-child {
+  border-right: 0;
+}
+
+/* sticky first "Part" column */
+.table-parametric .table-parametric-part {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  width: 280px;
+  min-width: 280px;
+  outline: 1px solid var(--border-color);
+}
+
+.table-parametric .table-parametric-part::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 1px;
+  height: 100%;
+  box-shadow: rgb(0 0 0 / 15%) 5px 5px 7px 1px;
+}
+
+.table-parametric tbody .table-parametric-part {
+  height: 70px;
+  padding: 12px 8px 8px 16px;
+}
+
+.table-parametric tbody .table-parametric-part a:any-link {
+  color: var(--link-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.5px;
+}
+
+.table-parametric tbody .table-parametric-part p + p {
+  margin-top: 10px;
+}
+
+.table-parametric tbody .table-parametric-part p + p a:any-link {
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  text-decoration: underline;
+}
+
+/* part filter in the "Part" header cell */
+.table-parametric .table-parametric-filter {
+  margin: 8px 0;
+}
+
+.table-parametric .table-parametric-filter input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 200px;
+  height: 30px;
+  margin: 0;
+  padding: 5px 10px 5px 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23686664' stroke-width='2' stroke-linejoin='round'%3E%3Cpath d='M3 4h18l-7 8.5V19l-4 2v-8.5z'/%3E%3C/svg%3E") no-repeat 6px center / 14px 14px;
+  box-shadow: rgb(0 0 0 / 7.5%) 0 1px 1px 0 inset;
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.table-parametric .table-parametric-filter input::placeholder {
+  color: var(--muted-text-color);
+}
+
+/* footer: range + pagination */
+.table-parametric .table-parametric-footer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 100%;
+  padding: 12px 4px;
+  border: 1px solid var(--border-color);
+  border-top: 0;
+}
+
+.table-parametric .table-parametric-range {
+  margin: 0;
+  font-size: var(--body-font-size-m);
+  line-height: 22.8571px;
+}
+
+.table-parametric .table-parametric-pager {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.table-parametric .table-parametric-pager button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 35px;
+  height: 35px;
+  margin: 0 0 0 -1px;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: 22.8571px;
+}
+
+.table-parametric .table-parametric-pager button:hover {
+  background-color: rgb(0 0 0 / 6%);
+}
+
+.table-parametric .table-parametric-pager button[aria-current='page'] {
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.table-parametric .table-parametric-pager button.prev,
+.table-parametric .table-parametric-pager button.next {
+  width: 35px;
+  margin: 0;
+  color: var(--dark-color);
+}
+
+.table-parametric .table-parametric-pager button.prev::before,
+.table-parametric .table-parametric-pager button.next::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-top: 1.5px solid currentcolor;
+  border-right: 1.5px solid currentcolor;
+  transform: rotate(45deg);
+}
+
+.table-parametric .table-parametric-pager button.prev::before {
+  transform: rotate(-135deg);
+}
+
+.table-parametric .table-parametric-pager button:disabled {
+  opacity: 1;
+  color: rgb(0 0 0 / 50%);
+}
+
+.table-parametric .table-parametric-pager button:disabled:hover {
+  background-color: transparent;
+}
+
+@media (width >= 481px) {
+  .table-parametric .table-parametric-footer {
+    flex-direction: row;
+  }
+
+  .table-parametric .table-parametric-range {
+    padding-left: 16px;
+  }
+}
+
+@media (width >= 900px) {
+  .table-parametric .table-parametric-toolbar {
+    flex-direction: row;
+  }
+
+  /* source: table and footer break out to the viewport minus 40px each side */
+  .table-parametric .table-parametric-scroller,
+  .table-parametric .table-parametric-footer {
+    position: relative;
+    left: 50%;
+    width: calc(100vw - 80px);
+    max-width: none;
+    margin-left: calc(40px - 50vw);
+  }
+}
+
+.table-parametric .table-parametric-pager:empty {
+  display: none;
+}

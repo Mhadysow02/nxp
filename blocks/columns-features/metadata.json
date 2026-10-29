@@ -1,0 +1,19 @@
+{
+  "variantName": "columns-features",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Grouped feature list",
+    "layout": "Rows of group label left and bullet list right separated by rules; groups after the second collapse behind More",
+    "notes": "Feature groups laid out label-left / bullet-list-right, rows separated by rules: \"Scalable MCU Platform\", \"Functional Safety, Security and Automotive Connectivity\", third group (AUTOSAR and production software); truncated with \"More\" toggle."
+  },
+  "contentPattern": {
+    "structure": "one row per feature group: group label | bullet list",
+    "rowModel": "collection"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Product Details > Features.",
+  "reuseGuidance": "Use for label/list feature matrices.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

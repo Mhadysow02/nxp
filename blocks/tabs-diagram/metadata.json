@@ -1,0 +1,19 @@
+{
+  "variantName": "tabs-diagram",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Block diagram switcher",
+    "layout": "Pill toggles above a bordered diagram frame with expand control and PDF link",
+    "notes": "Block diagram switcher: 5 pill toggles (S32K3 Single-Core, S32K3 Dual/Lockstep Features, S32K3 for ASIL D Features, S32K3 for Multicore, S32K3 Software Ecosystem); each panel shows a titled diagram image in a bordered frame with expand icon and a \"Get Diagram PDF\" button."
+  },
+  "contentPattern": {
+    "structure": "one row per diagram: label | H3 title, diagram image, Get Diagram PDF link",
+    "rowModel": "collection"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Product Details > Block Diagram.",
+  "reuseGuidance": "Use for switching between alternate diagrams/images; use tabs for general tabbed content.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

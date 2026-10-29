@@ -59,7 +59,20 @@
         "table",
         "text",
         "title",
-        "video"
+        "video",
+        "hero-product",
+        "columns-jump-nav",
+        "columns-gallery",
+        "tabs-diagram",
+        "columns-features",
+        "table-compare",
+        "cards-program",
+        "cards-product",
+        "table-parametric",
+        "cards-doc-list",
+        "cards-resource",
+        "search-community",
+        "columns-links"
       ]
     }
   ]

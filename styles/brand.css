@@ -1,0 +1,64 @@
+/* NXP brand tokens — extracted from https://www.nxp.com/products/S32K3 */
+:root {
+  /* colors */
+  --background-color: #fff;
+  --light-color: #f6f6f6;
+  --dark-color: #686664;
+  --text-color: #000;
+  --link-color: #215bd6;
+  --link-hover-color: #215bd6;
+  --overlay-background-color: rgb(0 0 0 / 50%);
+  --border-color: #d4cfc5;
+  --accent-color: #ff7400;
+  --accent-hover-color: #994600;
+  --muted-text-color: #686664;
+
+  /* fonts */
+  --body-font-family: poppins, poppins-fallback, sans-serif;
+  --heading-font-family: poppins, poppins-fallback, sans-serif;
+
+  /* body sizes (mobile) */
+  --body-font-size-m: 14px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+  --body-line-height: 1.4286;
+
+  /* heading sizes (mobile) */
+  --heading-font-size-xxl: 30px;
+  --heading-font-size-xl: 30px;
+  --heading-font-size-l: 18px;
+  --heading-font-size-m: 16px;
+  --heading-font-size-s: 14px;
+  --heading-font-size-xs: 12px;
+
+  /* spacing */
+  --content-max-width: 1140px;
+  --content-gutter: 15px;
+  --section-padding: 32px;
+
+  /* buttons */
+  --button-radius: 100px;
+  --button-font-size: 12px;
+  --button-letter-spacing: 0.04em;
+  --button-transition: 0.2s cubic-bezier(0.04, 0, 0.2, 1);
+
+  /* nav heights */
+  --nav-height: 64px;
+  --breadcrumbs-height: 34px;
+  --header-height: var(--nav-height);
+}
+
+@media (width >= 900px) {
+  :root {
+    --body-font-size-m: 16px;
+    --body-font-size-s: 14px;
+    --body-font-size-xs: 12px;
+    --heading-font-size-xxl: 40px;
+    --heading-font-size-xl: 30px;
+    --heading-font-size-l: 20px;
+    --heading-font-size-m: 16px;
+    --heading-font-size-s: 14px;
+    --heading-font-size-xs: 12px;
+    --section-padding: 48px;
+  }
+}
