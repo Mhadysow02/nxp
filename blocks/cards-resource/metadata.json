@@ -1,0 +1,19 @@
+{
+  "variantName": "cards-resource",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Design resource list",
+    "layout": "Rule-separated resource items with optional thumbnail, eyebrow, linked title, badges, metadata and CTA; collapses after 5 with Show All",
+    "notes": "Design file list (facets left): eCAD promo strip, 1 item with eyebrow \"Printed Circuit Boards and Schematics\", title, ZIP / Rev / date / size / code metadata, \"Account Required\", Download button, bookmark. | Hardware list (facets left, NXP 51 / Partners 25): 5 items each board image, eyebrow category, linked board title, Featured/Active badges, part code, bookmark; partner note strip; \"Show All\". | Software list (facets left): 5 items with eyebrow category, title, Featured badge, metadata (type, rev, date, code), Download button, bookmark; partner note strip; \"Show All\". | Engineering services list (facets left): note strip linking Engineering Services, 5 partner service items (eyebrow, linked title, By partner, tier, HQ, Supporting Regions), \"Show All\", closing sentence with Partner Marketplace link. | Training list (facets left: Public/Secure/By Partners, Online, Skill Level, Duration): items with eyebrow \"On-Demand\", linked title, Featured badge, duration / language / level / type, \"Account Required\", bookmark; partner note strip; \"Show All\"."
+  },
+  "contentPattern": {
+    "structure": "one row per resource: optional image (or empty cell) | eyebrow, title link, badges, metadata, CTA",
+    "rowModel": "collection"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Design Resources (design files, hardware, software, engineering services) and Training sections.",
+  "reuseGuidance": "Reuse across all resource categories on product pages.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

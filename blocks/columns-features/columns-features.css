@@ -1,0 +1,135 @@
+/* Columns Features — NXP "Features" groups: label | bullet list, rules between rows */
+
+/* mobile: groups stacked, every group visible, no toggle */
+.columns-features .columns-features-row {
+  border-top: 1px solid #d4cfc5;
+}
+
+.columns-features .columns-features-label h3,
+.columns-features .columns-features-label p {
+  margin: 0;
+  padding: 12px 16px 12px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.columns-features .columns-features-body ul {
+  margin: 0 0 11px 24px;
+  padding: 0 14px 0 1.2em;
+  list-style-type: disc;
+}
+
+.columns-features .columns-features-body li {
+  margin: 0 0 0.5em;
+}
+
+.columns-features .columns-features-toggle-wrap {
+  display: none;
+}
+
+@media (width >= 900px) {
+  .columns-features .columns-features-row {
+    display: flex;
+  }
+
+  .columns-features .columns-features-row:first-child {
+    border-top: 0;
+  }
+
+  .columns-features .columns-features-label {
+    box-sizing: border-box;
+    flex: 0 0 30%;
+    min-width: 0;
+  }
+
+  .columns-features .columns-features-label h3,
+  .columns-features .columns-features-label p {
+    margin: 22px 0 11px;
+    padding: 0 1em 0 0;
+    font-weight: 600;
+  }
+
+  .columns-features .columns-features-body {
+    flex: 0 0 70%;
+    min-width: 0;
+  }
+
+  /* source list contains the last item's bottom margin (no collapse) */
+  .columns-features .columns-features-body ul {
+    display: flow-root;
+    margin: 22px 0 11px;
+    padding: 0 0 0 1.2em;
+  }
+
+  .columns-features .columns-features-body li {
+    margin: 0 0 8px;
+  }
+
+  .columns-features .columns-features-row:last-child .columns-features-body ul {
+    margin-bottom: 0;
+  }
+
+  .columns-features .columns-features-row:last-child .columns-features-body li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* collapsed: clip to the source height and fade out the bottom */
+  .columns-features.is-collapsed .columns-features-list {
+    max-height: 700px;
+    overflow: hidden;
+  }
+
+  .columns-features.is-collapsed:not(.is-short) .columns-features-list {
+    mask-image: linear-gradient(#000 60%, transparent);
+  }
+
+  .columns-features .columns-features-toggle-wrap {
+    display: block;
+    margin: 0 0 11px;
+    padding: 16px 0 0;
+    border-top: 1px dashed #d4cfc5;
+  }
+
+  .columns-features.is-short .columns-features-toggle-wrap {
+    display: none;
+  }
+
+  .columns-features .columns-features-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--link-color);
+    font-family: var(--body-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.857px;
+    cursor: pointer;
+  }
+
+  /* chevron (source: Font Awesome angle-down / angle-up) */
+  .columns-features .columns-features-toggle::after {
+    content: '';
+    box-sizing: border-box;
+    width: 7px;
+    height: 7px;
+    margin-top: -4px;
+    border-right: 1.5px solid currentcolor;
+    border-bottom: 1.5px solid currentcolor;
+    transform: rotate(45deg);
+  }
+
+  .columns-features:not(.is-collapsed) .columns-features-toggle::after {
+    margin-top: 3px;
+    transform: rotate(-135deg);
+  }
+
+  .columns-features .columns-features-toggle:focus-visible {
+    outline: 2px solid var(--link-color);
+    outline-offset: 2px;
+  }
+}

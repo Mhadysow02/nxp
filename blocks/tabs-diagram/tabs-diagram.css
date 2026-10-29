@@ -1,0 +1,210 @@
+/* Tabs Diagram — values extracted from nxp.com .interactive-bd-component */
+
+/* expanded view dialog (appended to body) */
+.tabs-diagram-dialog {
+  max-width: 95vw;
+  max-height: 95vh;
+  padding: 24px;
+  border: 0;
+}
+
+.tabs-diagram-dialog img {
+  display: block;
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.tabs-diagram-dialog .tabs-diagram-dialog-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  margin: 0;
+  padding: 8px 13px;
+  border: 0;
+  border-radius: 100px;
+  background-color: transparent;
+  color: #000;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.tabs-diagram-dialog .tabs-diagram-dialog-close:hover {
+  background-color: #ebe7dd;
+}
+
+/* pill toggles (source: .bd-toggle > li > a.btn.btn-sm) */
+.tabs-diagram .tabs-diagram-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  max-width: 100%;
+  margin: 0 0 28px;
+}
+
+.tabs-diagram .tabs-diagram-list .tabs-diagram-tab,
+main .tabs-diagram a.button:any-link {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 100px;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.04, 0, 0.2, 1);
+}
+
+/* 2px gradient outline that sweeps on hover (source: .btn-default::before) */
+.tabs-diagram .tabs-diagram-list .tabs-diagram-tab::before,
+main .tabs-diagram a.button:any-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  padding: 2px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #fca600 7%, #69ca00 19%, #0eafe0 38.5%, #000 60%) 99% center / 250% auto;
+  mask-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+  mask-clip: content-box, border-box;
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
+}
+
+.tabs-diagram .tabs-diagram-list .tabs-diagram-tab:hover::before,
+main .tabs-diagram a.button:any-link:hover::before {
+  background-position: 0 center;
+}
+
+main .tabs-diagram a.button:any-link:hover {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.tabs-diagram .tabs-diagram-tab p {
+  margin: 0;
+}
+
+/* active pill: solid black, no outline */
+.tabs-diagram .tabs-diagram-list .tabs-diagram-tab[aria-selected='true'] {
+  background-color: #000;
+  color: #fff;
+}
+
+.tabs-diagram .tabs-diagram-list .tabs-diagram-tab[aria-selected='true']::before {
+  display: none;
+}
+
+.tabs-diagram .tabs-diagram-list .tabs-diagram-tab[aria-selected='true']:hover {
+  background-color: var(--dark-color);
+}
+
+/* panels */
+.tabs-diagram .tabs-diagram-panel[aria-hidden='true'] {
+  display: none;
+}
+
+/* diagram frame (source: .bd-body / .bd-col-left) */
+.tabs-diagram .tabs-diagram-frame {
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  padding: 15px;
+  border: 1px solid #d4cfc5;
+  background-color: #fff;
+}
+
+.tabs-diagram .tabs-diagram-frame h3 {
+  margin: 0 0 11px;
+  padding-right: 48px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--text-color);
+}
+
+.tabs-diagram .tabs-diagram-frame p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.tabs-diagram .tabs-diagram-frame picture {
+  display: block;
+  max-width: 100%;
+}
+
+.tabs-diagram .tabs-diagram-frame img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* expand control (source: .bd-button.btn-tertiary + .icon-expand) */
+.tabs-diagram .tabs-diagram-expand {
+  position: absolute;
+  top: 5px;
+  right: 9px;
+  box-sizing: border-box;
+  width: 45px;
+  height: 44px;
+  margin: 0;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.04, 0, 0.2, 1);
+}
+
+.tabs-diagram .tabs-diagram-expand::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 11px;
+  width: 21px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32S0 334.3 0 352v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.tabs-diagram .tabs-diagram-expand:hover {
+  background-color: #ebe7dd;
+}
+
+/* Get diagram PDF (source: .text-right > a.btn.btn-sm.btn-default) */
+.tabs-diagram .tabs-diagram-panel .button-container {
+  display: block;
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  .tabs-diagram .tabs-diagram-frame {
+    min-height: 502px;
+    padding: 30px;
+    border-color: #000;
+  }
+
+  .tabs-diagram .tabs-diagram-expand {
+    top: 10px;
+  }
+
+  .tabs-diagram .tabs-diagram-panel .button-container {
+    text-align: right;
+  }
+}

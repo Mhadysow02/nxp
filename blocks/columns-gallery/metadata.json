@@ -1,0 +1,19 @@
+{
+  "variantName": "columns-gallery",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Product overview with media gallery",
+    "layout": "Left media stage with thumbnails and expand dialog, right overview copy collapsed behind More plus document buttons",
+    "notes": "Two columns: left a media gallery (main chip image S32K3 HDQFP, expand button, \"Click image to open expanded view\", 4 thumbnails incl. 2 Brightcove videos); right overview text (3 paragraphs with inline links, truncated with \"More\" toggle) followed by \"Data Sheet\" and \"Reference Manual\" outline buttons and an ECAD (PCB symbol / 3D model) icon link."
+  },
+  "contentPattern": {
+    "structure": "1 row x 2 cells: images and video links | overview paragraphs, buttons, icon link",
+    "rowModel": "standalone"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Product overview section.",
+  "reuseGuidance": "Use when a media gallery sits beside descriptive text; use columns for static image/text.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

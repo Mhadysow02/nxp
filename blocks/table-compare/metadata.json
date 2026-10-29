@@ -1,0 +1,19 @@
+{
+  "variantName": "table-compare",
+  "baseBlock": "table",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Software offering comparison table",
+    "layout": "Bordered fixed-layout grid with header row; empty cells after a filled cell extend it (colspan)",
+    "notes": "Bordered comparison table: header Tools | Reference Software | Standard Software | Premium Software, a row of linked software names, then a row Software Package Manager | NXP Support | SafeAssure NDA group with spanning cells; beige header/footer cells."
+  },
+  "contentPattern": {
+    "structure": "header row then data rows, same cell count per row; leave a cell empty to merge it into the cell on its left",
+    "rowModel": "collection"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Product Details > Software Enablement.",
+  "reuseGuidance": "Use for small comparison grids; use table-parametric for large part data.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

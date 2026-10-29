@@ -1,0 +1,19 @@
+{
+  "variantName": "columns-links",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Side-by-side link groups",
+    "layout": "Two link groups, each heading plus link list, first column narrower on desktop",
+    "notes": "Two side-by-side link groups: \"Recommended Communities\" (S32K, S32 Design Studio, external) and \"Suggested Links\" (12 blog/video/article links)."
+  },
+  "contentPattern": {
+    "structure": "1 row x 2 cells: H4 + links | H4 + links",
+    "rowModel": "standalone"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Support section (Recommended Communities | Suggested Links).",
+  "reuseGuidance": "Use for link directories.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

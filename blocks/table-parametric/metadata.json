@@ -1,0 +1,19 @@
+{
+  "variantName": "table-parametric",
+  "baseBlock": "table",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Parametric part table",
+    "layout": "Wide scrollable table with sticky part column, part-number filter, result count, pagination (10/page) and CSV download",
+    "notes": "Parametric part table (application-driven): results count \"1-10 of 38 results\", NRND checkbox, Download XLS button, part-number filter, columns Part, Order, CAD Model, Status, Core count, Core Type, Lockstep, Operating Frequency, Flash ...; rows per part number linking to part pages; pagination 1-4."
+  },
+  "contentPattern": {
+    "structure": "header row of parameter names then one row per part (first cell = part number link); up to 32 columns",
+    "rowModel": "collection"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Buy/Parametrics section.",
+  "reuseGuidance": "Use for large part/parameter data; filter matches the first column.",
+  "sourceUrl": "https://www.nxp.com/products/S32K3"
+}

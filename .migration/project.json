@@ -1,0 +1,16 @@
+{
+  "type": "xwalk",
+  "sites": {
+    "nxp": {
+      "previewOrg": "Mhadysow02",
+      "previewSite": "nxp",
+      "contentHostUrl": "author-p149266-e1521840.adobeaemcloud.com",
+      "aemSitePath": "/content/nxp",
+      "aemAssetsFolderPath": "/content/dam/nxp",
+      "aemSiteName": "nxp",
+      "aemSiteTitle": "nxp",
+      "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
+      "botProtected": true
+    }
+  }
+}

@@ -1,0 +1,94 @@
+/* Cards Program: stacked program items (logo | title, text, Read more) separated by a rule */
+.cards-program > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* source: article.secondary-topic-item — flex row, padding .5em 15px (8px desktop / 7px mobile) */
+.cards-program > ul > li {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.5em 15px;
+}
+
+/* source: <hr> between items — 1px #d4cfc5, margin 1.5em 0 (24px desktop / 21px mobile) */
+.cards-program > ul > li + li {
+  margin-top: 1.5em;
+  padding-top: 2em;
+  border-top: 1px solid var(--border-color);
+}
+
+/* source: section.secondary-topic-media — auto width, max 33.333%, 15px right padding */
+.cards-program .cards-program-card-image {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  max-width: 33.3333%;
+  padding-right: 15px;
+  line-height: 0;
+}
+
+.cards-program .cards-program-card-image p {
+  margin: 0;
+}
+
+.cards-program .cards-program-card-image picture {
+  display: block;
+}
+
+/* source: img width="150" + max-width: 100% */
+.cards-program .cards-program-card-image img {
+  display: block;
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* source: section.secondary-topic-content */
+.cards-program .cards-program-card-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.cards-program > ul > li.no-image .cards-program-card-body {
+  flex-basis: 100%;
+}
+
+.cards-program .cards-program-card-body h4 {
+  margin: 0 0 11px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 17.6px;
+}
+
+.cards-program .cards-program-card-body p {
+  margin: 0 0 0.5em;
+}
+
+.cards-program .cards-program-card-body > :last-child,
+.cards-program .cards-program-card-body .button-container {
+  margin-bottom: 0;
+}
+
+.cards-program .cards-program-card-body .button-container {
+  display: block;
+}
+
+/* source: ul.secondary-topic-link a — link color, no underline, Font Awesome angle-right after */
+main .cards-program .cards-program-card-body a.button:any-link,
+main .cards-program .cards-program-card-body a.button:any-link:hover {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+main .cards-program .cards-program-card-body a.button:any-link::after {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.375em;
+  height: 0.375em;
+  margin-left: 0.05em;
+  border-top: 1.5px solid currentcolor;
+  border-right: 1.5px solid currentcolor;
+  transform: translateY(-0.08em) rotate(45deg);
+}

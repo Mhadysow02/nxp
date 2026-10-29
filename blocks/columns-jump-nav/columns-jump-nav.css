@@ -1,0 +1,184 @@
+/* Columns Jump Nav — NXP in-page context nav (#contextnav) */
+
+/* sticky bar: the section is the sticky element so it can travel with the page.
+   Section top padding becomes margin so no empty band sticks above the bar. */
+main > .section.columns-jump-nav-container {
+  position: sticky;
+  top: var(--nav-height);
+  z-index: 10;
+  margin-top: var(--section-padding);
+  padding-top: 0;
+}
+
+.columns-jump-nav {
+  position: relative;
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* full-bleed white bar with top/bottom rule and drop shadow */
+.columns-jump-nav::before {
+  content: '';
+  position: absolute;
+  inset: -1px auto 0 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-top: 1px solid rgb(212 207 197);
+  border-bottom: 1px solid rgb(212 207 197);
+  box-shadow: rgb(0 0 0 / 10%) 0 12px 14px -8px;
+}
+
+.columns-jump-nav.is-stuck::before {
+  box-shadow: none;
+}
+
+/* single row; on mobile links + actions scroll horizontally inside the bar */
+.columns-jump-nav > div {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  height: 63px;
+  margin: 0 calc(-1 * var(--content-gutter));
+  padding: 0 var(--content-gutter) 1px;
+  overflow: auto hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.columns-jump-nav > div::-webkit-scrollbar {
+  display: none;
+}
+
+/* "Jump To" label is the nav's accessible name only; source does not render it */
+.columns-jump-nav .columns-jump-nav-label {
+  display: none;
+}
+
+.columns-jump-nav .columns-jump-nav-links {
+  display: flex;
+  flex: none;
+}
+
+.columns-jump-nav .columns-jump-nav-links ul {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.columns-jump-nav .columns-jump-nav-links li {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+main .columns-jump-nav .columns-jump-nav-links a:any-link {
+  display: block;
+  padding: 3.5px 0;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+main .columns-jump-nav .columns-jump-nav-links a:any-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* active section: 3px orange underline across the item at the bar's bottom */
+.columns-jump-nav .columns-jump-nav-links li:has(a[aria-current='true'])::before {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.columns-jump-nav .columns-jump-nav-actions {
+  display: flex;
+  flex: none;
+  gap: 8px;
+  align-items: center;
+}
+
+.columns-jump-nav .columns-jump-nav-actions p {
+  display: flex;
+  margin: 0;
+}
+
+main .columns-jump-nav .columns-jump-nav-actions a.button:any-link {
+  display: block;
+  padding: 5px 12px;
+  border: 0;
+  border-radius: var(--button-radius);
+  background-color: transparent;
+  color: #000;
+  font-family: var(--body-font-family);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: var(--button-letter-spacing);
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+main .columns-jump-nav .columns-jump-nav-actions a.button:any-link:hover {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+main .columns-jump-nav .columns-jump-nav-actions a.button.primary:any-link {
+  background-color: var(--accent-color);
+  color: #fff;
+  transition: background-color var(--button-transition);
+}
+
+main .columns-jump-nav .columns-jump-nav-actions a.button.primary:any-link:hover,
+main .columns-jump-nav .columns-jump-nav-actions a.button.primary:any-link:focus-visible {
+  background-color: var(--accent-hover-color);
+  color: #fff;
+}
+
+@media (width >= 900px) {
+  .columns-jump-nav {
+    font-size: 16px;
+    line-height: 22.8571px;
+  }
+
+  .columns-jump-nav > div {
+    margin: 0;
+    padding: 0 0 1px;
+  }
+
+  .columns-jump-nav .columns-jump-nav-links {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .columns-jump-nav .columns-jump-nav-links ul {
+    gap: 24px;
+  }
+
+  main .columns-jump-nav .columns-jump-nav-links a:any-link {
+    padding: 4px 0;
+    font-size: 16px;
+    line-height: 22.8571px;
+  }
+
+  .columns-jump-nav .columns-jump-nav-actions {
+    margin-left: auto;
+  }
+
+  main .columns-jump-nav .columns-jump-nav-actions a.button:any-link {
+    padding: 8px 16px;
+    font-size: var(--button-font-size);
+  }
+}
